@@ -1,0 +1,51 @@
+/* Universal Selector */
+*{
+    /* font-family: cursive;
+    color: green; */
+}
+
+/* Descendent selector */
+/* .box a{
+    color: red;
+} */
+
+/* Child Selector */
+/* .box > a{
+    color: pink;
+} */
+
+/* Attribute Selector */
+input[type="email"],
+input[type="password"]{
+    font-size: 22px;
+    font-family: Arial;
+}
+input[type="submit"]{
+    background-color: black;
+    color: white;
+}
+input[name="emailid"]{
+    margin-bottom: 10px;
+}
+
+/* Psudo Selector */
+.link:hover{
+    color: white;
+    background-color: black;
+}
+
+.html{
+    color: red;
+    font-size: 50px;
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    font-style: italic;
+}
+p{
+    text-align: justify;
+}
+a{
+    text-decoration: none;
+}
