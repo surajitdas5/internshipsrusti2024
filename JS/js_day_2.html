@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            color: blue;
+            background-color: aquamarine;
+            border: 2px solid yellow;
+            padding: 20px;
+        }
+        .show{
+            display: none;
+        }
+        .bulb{
+            height: 150px;
+            width: 150px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+        .bg-yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Day - 2</h1>
+    <h1 id="html">HTML</h1>
+    <h1 class="css">CSS</h1>
+    <button onclick="test()" ondblclick="test2()" onmouseover="test3()" onmouseout="test4()">Click</button>
+    <button onclick="console.log('Click me 2')">Click 2</button>
+
+    <h1 id="h1" onmouseover="func1()" onmouseout="func2()">Catch Me</h1>
+
+    <p id="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolor corrupti nobis modi error inventore explicabo suscipit eius dolorem reiciendis eligendi quisquam!</p>
+    <button id="hide" onclick="hide()">Hide</button>
+    <button id="show" onclick="show()">Show</button>
+    <button id="toggle" onclick="toggle()">Toggle</button>
+    <br>
+    <div class="bulb"></div>
+    <button onclick="onoff()">On/Off</button>
+    <br>
+    <input type="number" id="num1" placeholder="First Number"><br><br>
+    <input type="number" id="num2" placeholder="Second Number"><br><br>
+    <button onclick="add()">Add</button>
+    <p id="res"></p>
+    <script>
+        // Dialog Box
+
+        // alert("Hello");
+        // confirm("Are you sure?")
+        // let res = confirm("Are you sure?")
+        // console.log(res);
+        
+        // let inp = prompt("enter your name");
+        // console.log(typeof(inp));
+        // console.log(inp);
+        // let a = prompt("Enter first number")
+        // let b = prompt("Enter second number")
+        // a = parseInt(a)
+        // b = parseInt(b)
+        // alert(a+b)
+
+        // let name = null
+        // while(name == null){
+        //     name = prompt("Enter Your name Name")
+        //     if(name == null){
+        //         alert('Please enter your name')
+        //     } else {
+        //         alert("Hello "+name)
+        //     }
+        // }
+
+        // DOM
+
+        // let x = document.getElementsByTagName("h1") // Element selector
+        // console.log(x);
+        // x[0].innerHTML ="Java Script"
+
+        // let y = document.getElementById("html") // ID Selector
+        // y.innerHTML = "Hypertext Markup Language"
+        // console.log(y);
+        
+        // let z = document.getElementsByClassName("css") // Class selector
+        // console.log(z);
+        
+        // let a = document.querySelector("h1")
+        // let a = document.querySelector("#html")
+        // let a = document.querySelector(".css")
+        // let a = document.querySelectorAll("h1")
+        // console.log(a);
+        // a.style.color = "red";
+        // a.style.backgroundColor = "yellow";
+        // a.style.display = "none"
+
+        // a.classList.add("heading")
+        // for(let i =0; i<a.length; i++){
+        //     a[i].classList.add("heading")
+        // }
+
+        // Event
+
+        // function test(){
+        //     console.log("Button Clicked");
+        //     alert("Hello")
+        // }
+
+        // function test2(){
+        //     console.log("Button is double clicked");
+        
+        // }
+
+        // function test3(){
+        //     console.log("Mouse is on the top of the button"); 
+        // }
+        // function test4(){
+        //     console.log("Mouse is moved from top of the button");
+            
+        // }
+    
+        function func1(){
+            // let x = document.querySelector("#h1")
+            // x.innerHTML = "If You can"
+            document.querySelector("#h1").innerHTML = "If you can!!!"
+        }
+        function func2(){
+            document.querySelector("#h1").innerHTML = "Catch Me"
+        }
+
+        function hide(){
+            document.querySelector("#info").style.display = "none"
+        }
+        function show(){
+            document.querySelector("#info").style.display = "block"
+        }
+
+        function toggle() {
+            document.querySelector("#info").classList.toggle("show")
+        }
+
+        function onoff(){
+            document.querySelector(".bulb").classList.toggle("bg-yellow")
+        }
+
+        function add(){
+            let a = Number(document.querySelector("#num1").value)
+            let b = Number(document.querySelector("#num2").value)
+            let c = a+b
+            document.querySelector("#res").innerHTML = "Sum ="+c
+        }
+    </script>
+</body>
+</html>
