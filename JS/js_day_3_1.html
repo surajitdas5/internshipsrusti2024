@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://google.com" onclick="preventFunction(event)">Google</a>
+    
+    <form action="js_day_2.html" method="post" onsubmit="func3(event)">
+        <input type="submit">
+    </form>
+    
+    <script>
+        function preventFunction(e){
+            console.log(e);
+            e.preventDefault()
+        }
+
+        function func3(e){
+            e.preventDefault()
+            console.log("Form submitted");
+            
+        }
+
+        // Regular Expression
+        // let s = "JavaScript"
+        let s = "JAVA"
+        // let pat = /xava/
+        // let pat = /a/
+        // let pat = /z/
+        // let pat = /[abcd]/
+        // let pat = /[a-z]/
+        // let pat = /[A-Z]/
+        // let pat = /[A-Z]{5}/
+        // let pat = /[A-Z]{2,5}/
+        // let pat = /[A-Z]{4,}/
+        // let pat = /^A/
+        // let pat = /^J/
+        let pat = /A$/
+
+        let res = s.match(pat)
+        console.log(res);
+        
+    </script>
+</body>
+</html>

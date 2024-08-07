@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p id="info" onmouseover="func1()" onmouseout="func2()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure dignissimos amet itaque. Numquam quis ullam labore aliquam qui, doloremque, est ipsum fuga ut eius molestias laborum id odio debitis quibusdam!</p>
+
+    <p>You have clicked <span id="countDisplay">0</span> times</p>
+    <button onclick="increment()">Click</button>
+
+    <script>
+        function func1(){
+            document.querySelector("#info").style.fontSize="22px";
+        }
+        function func2(){
+            document.querySelector("#info").style.fontSize="16px";
+        }
+        let count = 0
+        function increment(){
+            count++;
+            document.querySelector("#countDisplay").innerHTML = count
+        }
+    </script>
+</body>
+</html>
