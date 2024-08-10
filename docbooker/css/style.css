@@ -2,3 +2,13 @@
     color: #018f01 !important;
     font-weight: 600 !important;
 }
+.text-justified{
+    text-align: justify;
+}
+.feature-icon{
+    font-size: 75px;
+    margin-bottom: 0.5rem;
+}
+.doc-image{
+    height: 700px;
+}
