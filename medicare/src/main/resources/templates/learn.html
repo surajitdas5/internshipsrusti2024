@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/style.css}">
+<style>
+/* *{
+	margin: 0px;
+}
+.container{
+	display: flex;
+}
+.employee{
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+} */
+</style>
+</head>
+<body>
+<!-- <a th:href="@{/home}">Home</a>
+<a th:href="@{/about}">About</a>
+<a th:href="@{/learn}">Learn</a> -->
+<div th:replace="~{navbar.html}"></div>
+<h1>Learn Thymeleaf</h1>
+<h1 th:text="${username}"></h1>
+<h2 th:text="${age}"></h2>
+<h2 th:text="${salary}"></h2>
+<p><span th:text="${username}"></span> is <span th:text="${age}"></span> yeras old and get <span th:text="${salary}"></span> as salary.</p>
+<p th:each="n : ${nums}" th:text="${n}"></p>
+<ul>
+<li th:each="f: ${foods}" th:text="${f}"></li>
+</ul>
+<ol>
+	<li th:each="e : ${emps}" th:text="${e.name}"></li>
+</ol>
+<table border="1">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Salary</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="e: ${emps}">
+			<td th:text="${e.id}"></td>
+			<td th:text="${e.name}"></td>
+			<td th:text="${e.salary}"></td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="container">
+	<div class="employee" th:each="e : ${emps}">
+		<h3 th:text="${e.id}"></h3>
+		<h1 th:text="${e.name}"></h1>
+		<p th:text="${e.salary}"></p>
+	</div>
+</div>
+<p th:if="${number%2 == 0}">Number is even</p>
+<p th:unless="${number%2 == 0}">Number is odd</p>
+</body>
+</html>
