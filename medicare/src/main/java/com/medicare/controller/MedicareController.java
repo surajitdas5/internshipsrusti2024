@@ -3,11 +3,13 @@ package com.medicare.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MedicareController {
 	
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String homePage() {
 		return "index";
 	}
@@ -15,6 +17,28 @@ public class MedicareController {
 	@GetMapping("/about")
 	public String about() {
 		return "about";
+	}
+	
+	@GetMapping("/signup-form")
+	public String signUpForm() {
+		return "signup";
+	}
+	
+	
+	
+	@GetMapping("/signin-form")
+	public String signInForm() {
+		return "signin";
+	}
+	
+	@PostMapping("/signin")
+	public String signIn(
+			@RequestParam("email") String e,
+			@RequestParam("password") String p
+			) {
+		System.out.println("Form Submitted");
+		System.out.println(e+" "+p);
+		return "signin";
 	}
 	
 	@GetMapping("/learn")

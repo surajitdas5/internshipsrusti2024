@@ -1,4 +1,4 @@
-*{
+/**{
 	margin: 0px;
 }
 .container{
@@ -10,4 +10,38 @@
 	border: 1px solid black;
 	background-color: black;
 	color: white;
+}
+*/
+.nav-link {
+	color: #018f01 !important;
+	font-weight: 600 !important;
+}
+
+.text-justified {
+	text-align: justify;
+}
+
+.feature-icon {
+	font-size: 75px;
+	margin-bottom: 0.5rem;
+}
+
+.doc-image {
+	height: 700px;
+}
+
+.form-input {
+	display: block;
+	width: 100%;
+	padding: 6px;
+}
+
+.error {
+	color: red;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.required {
+	color: red;
 }

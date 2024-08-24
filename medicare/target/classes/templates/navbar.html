@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare</title>
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BS5 CSS -->
+     <link rel="stylesheet" th:href="@{bootstrap/bootstrap.min.css}">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" th:href="@{css/style.css}">
 </head>
 <body>
-<nav>
-<a th:href="@{/home}">Home</a>
-<a th:href="@{/about}">About</a>
-<a th:href="@{/learn}">Learn</a>
-</nav>
-</body>
-</html>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand h3" href="#">
+            Medi<span class="text-success">Care</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/signin-form}">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/signup-form}">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-success btn-sm my-2" href="#">Docotor Login</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
