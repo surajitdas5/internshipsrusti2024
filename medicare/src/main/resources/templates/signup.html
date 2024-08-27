@@ -1,37 +1,37 @@
 <div th:replace="~{navbar.html}"></div>
 <section class="container">
-	<div class="row">
-		<div class="col-md-6 mx-auto my-4">
-		<h1 class="mb-2">Register Here</h1>
-	    <form action="index.html" method="post" onsubmit="validate(event)">
-	        <label>Name<span class="required">*</span></label>
-	        <input type="text" class="form-input" name="" id="name">
-	        <label class="error" id="nameError"></label>
-	        <label>Gender</label>
-	        <input type="radio" name="gender" value="Male"> Male
-	        <input type="radio" name="gender" value="Female"> Female
-	        <label class="error" id="genderError"></label>
-	        <label>Date of Borth<span class="required">*</span></label>
-	        <input type="date" class="form-input" name="" id="dob">
-	        <label class="error" id="dobError"></label>
-	        <label>Mobile</label>
-	        <input type="text" class="form-input" name="" id="mobile">
-	        <label class="error" id="mobileError"></label>
-	        <label>Email</label>
-	        <input type="email" class="form-input" name="" id="email">
-	        <label class="error" id="emailError"></label>
-	        <label>Password</label>
-	        <input type="password" class="form-input" name="" id="password">
-	        <label class="error" id="passwordError"></label>
-	        <label>Confirm Password</label>
-	        <input type="password" class="form-input" name="" id="password2">
-	        <label class="error" id="password2Error"></label>
-	        
-	        <input type="submit" value="Sign Up" class="btn btn-success">
-	    </form>
+<div class="row">
+<div class="col-md-6 mx-auto my-4">
+<h1>Register Here</h1>
+<p th:if="${message}" th:text="${message}"></p>
+    <form th:action="@{/signup}" method="post" th:object="${patient}" onsubmit="validate(event)">
+        <label>Name<span class="required">*</span></label>
+        <input type="text" class="form-input" name="" id="name" th:field="*{name}">
+        <label class="error" id="nameError"></label>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="Male" th:field="*{gender}"> Male
+        <input type="radio" name="gender" value="Female" th:field="*{gender}"> Female
+        <label class="error" id="genderError"></label>
+        <label>Date of Borth<span class="required">*</span></label>
+        <input type="date" class="form-input" name="" id="dob" th:field="*{dob}">
+        <label class="error" id="dobError"></label>
+        <label>Mobile</label>
+        <input type="text" class="form-input" name="" id="mobile" th:field="*{mobile}">
+        <label class="error" id="mobileError"></label>
+        <label>Email</label>
+        <input type="email" class="form-input" name="" id="email" th:field="*{email}">
+        <label class="error" id="emailError"></label>
+        <label>Password</label>
+        <input type="password" class="form-input" name="" id="password" th:field="*{password}">
+        <label class="error" id="passwordError"></label>
+        <label>Confirm Password</label>
+        <input type="password" class="form-input" name="" id="password2">
+        <label class="error" id="password2Error"></label>
+        <input type="submit" value="Sign Up" class="btn btn-success">
+    </form>
 
-		</div>
-	</div>
+</div>
+</div>
 </section>
 <script th:src="@{js/validator.js}"></script>
 <div th:replace="~{footer.html}"></div>

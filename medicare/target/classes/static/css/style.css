@@ -11,37 +11,25 @@
 	background-color: black;
 	color: white;
 }
-*/
-.nav-link {
-	color: #018f01 !important;
-	font-weight: 600 !important;
+*/	
+.nav-link{
+    color:rgb(17, 94, 17) !important;
+    font-weight: 600 !important;
 }
-
-.text-justified {
-	text-align: justify;
+.feature-icon{
+    font-size: 75px;
+    margin-bottom: o.5rem;
 }
-
-.feature-icon {
-	font-size: 75px;
-	margin-bottom: 0.5rem;
-}
-
-.doc-image {
-	height: 700px;
-}
-
-.form-input {
-	display: block;
-	width: 100%;
-	padding: 6px;
-}
-
-.error {
-	color: red;
-	margin-bottom: 8px;
-	display: block;
-}
-
-.required {
-	color: red;
-}
+ .form-input{
+            display: block;
+            width: 100%;
+            padding:6px;
+        }
+        .error{
+            color: red;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .required{
+            color: red;
+        }
