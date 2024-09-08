@@ -1,0 +1,46 @@
+<style>
+.rating {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.rating input {
+	display: none;
+}
+
+.rating label {
+	font-size: 2rem;
+	color: #ddd;
+	cursor: pointer;
+}
+
+.rating input:checked ~ label, .rating input:checked ~ input:checked ~
+	label {
+	color: gold;
+}
+
+.rating input:checked ~ label {
+	color: gold;
+}
+
+.rating label:hover, .rating label:hover ~ label {
+	color: gold;
+}
+</style>
+
+<div class="rating">
+     	<input id="star5" name="rating" type="radio" value="5" required>
+        <label for="star5">★</label>
+        <input id="star4" name="rating" type="radio" value="4" required>
+        <label for="star4">★</label>
+        <input id="star3" name="rating" type="radio" value="3" required>
+        <label for="star3">★</label>
+        <input id="star2" name="rating" type="radio" value="2" required>
+        <label for="star2">★</label>
+        <input id="star1" name="rating" type="radio" value="1" required>
+        <label for="star1">★</label>
+     </div>
